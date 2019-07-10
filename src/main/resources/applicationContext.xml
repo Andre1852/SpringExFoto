@@ -7,8 +7,14 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="javaCodeCr" class="com.am.spring.JavaCodeCr" />
+    <bean id="javaCodeCr" class="com.am.spring.JavaCodeCr" >
+        <property name="classNameGen" ref="animalTypeGen" />
+    </bean>
+    <bean id="vbNetCodeCr" class="com.am.spring.VBNetCodeCr" >
+        <constructor-arg ref="animalTypeGen" />
+    </bean>
 
+    <bean id="animalTypeGen" class="com.am.spring.AnimalTypeGen" />
 
 
 </beans>

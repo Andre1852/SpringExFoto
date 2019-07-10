@@ -10,6 +10,9 @@ public class MainApp {
         CodeCr javaCC = context.getBean("javaCodeCr", CodeCr.class);
         System.out.println(javaCC.getClassExample());
 
+        CodeCr vbNetCC = context.getBean("vbNetCodeCr", CodeCr.class);
+        System.out.println(vbNetCC.getClassExample());
+
         ((ClassPathXmlApplicationContext) context).close();
     }
 }
